@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LWB Construction - Luxury Custom Building & Additions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandPrimary: '#4798ab',
+                        brandTextDark: '#000000',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animations & Luxury Transitions */
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(71, 152, 171, 0.15);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4798ab;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-neutral-800 font-sans overflow-x-hidden">
+
+    <header class="sticky top-0 z-50 transition-all duration-300 shadow-md" style="background-color: #4798ab;">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="LWB Construction.jpg" alt="LWB Construction Logo" class="h-14 w-auto rounded shadow-sm hover:scale-105 transition duration-300">
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold tracking-wider uppercase">
+                <a href="#" class="text-white hover:text-slate-200 transition-colors duration-200">Home</a>
+                <a href="#about" class="text-white hover:text-slate-200 transition-colors duration-200">About</a>
+                <a href="#services" class="text-white hover:text-slate-200 transition-colors duration-200">Services</a>
+                <a href="#reviews" class="text-white hover:text-slate-200 transition-colors duration-200">Reviews</a>
+                <a href="#contact" class="text-white hover:text-slate-200 transition-colors duration-200">Contact</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-brandPrimary font-bold px-5 py-2.5 rounded-full text-xs uppercase tracking-widest transition duration-300">
+                    Get a Quote
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-teal-800 px-6 py-4 space-y-4 border-t border-teal-600 transition-all">
+            <a href="#" class="block text-white font-medium">Home</a>
+            <a href="#about" class="block text-white font-medium">About</a>
+            <a href="#services" class="block text-white font-medium">Services</a>
+            <a href="#reviews" class="block text-white font-medium">Reviews</a>
+            <a href="#contact" class="block text-white font-medium">Contact</a>
+            <a href="#contact" class="block bg-white text-teal-800 text-center font-bold py-2.5 rounded-full uppercase tracking-wider text-xs">Get a Quote</a>
+        </div>
+    </header>
+
+    <section class="relative bg-neutral-900 text-white min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1503387762458-7e52f42855f9?auto=format&fit=crop&w=1600&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-transparent z-0"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center lg:text-left grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-8 space-y-6">
+                <span class="text-xs uppercase tracking-widest font-extrabold text-white bg-brandPrimary/40 px-4 py-2 rounded-full inline-block border border-brandPrimary/50">LWB Construction Inc.</span>
+                <h1 class="text-4xl md:text-6xl font-serif font-bold text-white leading-tight">
+                    Transforming Spaces, <br><span class="italic text-teal-300">Perfecting Details</span>
+                </h1>
+                <p class="text-lg md:text-xl text-neutral-200 max-w-2xl font-light leading-relaxed">
+                    Elevating residential craftsmanship with world-class design, master construction, and custom additions. Explore our bespoke contracting services built on elite engineering standards.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#services" class="bg-[#4798ab] hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition duration-300 uppercase tracking-wider text-xs">
+                        View Our Work
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-full transition duration-300 uppercase tracking-wider text-xs">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+            <div class="hidden lg:block lg:col-span-4 bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-2xl">
+                <h3 class="text-xl font-bold font-serif text-white mb-4">Why Choose Us?</h3>
+                <ul class="space-y-4 text-sm text-neutral-300">
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-brandPrimary text-lg"></i>
+                        <span>Licensed, Insured & Bonded Builders</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-brandPrimary text-lg"></i>
+                        <span>Detailed Architectural Integrations</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-brandPrimary text-lg"></i>
+                        <span>Elite Structural Framing Specialists</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-brandPrimary text-lg"></i>
+                        <span>Committed to Transparent Project Timelines</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="About Construction Craftsmanship" class="w-full h-[450px] object-cover hover:scale-105 transition duration-500">
+                <div class="absolute bottom-6 right-6 bg-white py-4 px-6 rounded-xl shadow-lg border-l-4 border-brandPrimary">
+                    <span class="block text-3xl font-extrabold text-brandPrimary">15+</span>
+                    <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Years of Craft</span>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-6">
+            <span class="text-sm font-bold uppercase text-brandPrimary tracking-widest">Master Builders</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold" style="color: #4798ab;">We Design & Build Your Future Architecture</h2>
+            <p class="text-gray-600 leading-relaxed">
+                At <strong>LWB Construction</strong>, we believe every build is an art. From detailed framing to major structural conversions, our engineering team brings a comprehensive standard of excellence to your property. We specialize in sophisticated room extensions, premium custom-built decks, luxury ADUs, and architectural design processes.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+                Whether you need a new structural footprint or custom modern expansions, we navigate permits, planning, and premium material acquisitions with transparency and flawless execution.
+            </p>
+            <div class="pt-4">
+                <a href="#contact" class="inline-flex items-center space-x-2 text-brandPrimary hover:text-teal-600 font-bold transition-colors">
+                    <span>Learn more about our core philosophy</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white border-y border-neutral-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-sm font-bold uppercase text-brandPrimary tracking-widest">Our Expertise</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold" style="color: #4798ab;">Elite Contracting Services</h2>
+                <div class="w-20 h-1 bg-brandPrimary mx-auto rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-slate-50 rounded-2xl overflow-hidden hover-lift border border-slate-100 flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?auto=format&fit=crop&w=600&q=80" alt="Balcony addition" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-serif mb-3 text-neutral-900">1. Balcony Addition</h3>
+                            <p class="text-sm leading-relaxed mb-6" style="color: #000000;">
+                                Expand your horizons with architecturally sound, modern balcony additions configured with highly durable structural support systems.
+                            </p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/WGWm9cEV2qZi7Knu8"; class="text-xs font-bold uppercase tracking-widest text-brandPrimary hover:text-teal-700 mt-auto flex items-center space-x-2">
+                            <span>Get Started</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl overflow-hidden hover-lift border border-slate-100 flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Construction design services" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-serif mb-3 text-neutral-900">2. Construction Design Services</h3>
+                            <p class="text-sm leading-relaxed mb-6" style="color: #000000;">
+                                Seamless blueprints and layout options drafted specifically for optimal engineering execution, keeping structural longevity first.
+                            </p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/WGWm9cEV2qZi7Knu8"; class="text-xs font-bold uppercase tracking-widest text-brandPrimary hover:text-teal-700 mt-auto flex items-center space-x-2">
+                            <span>Get Started</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl overflow-hidden hover-lift border border-slate-100 flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Deck construction" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-serif mb-3 text-neutral-900">3. Deck Construction</h3>
+                            <p class="text-sm leading-relaxed mb-6" style="color: #000000;">
+                                Luxury, durable outdoor decks engineered using premium timber and treated composite options that stand up perfectly to climate elements.
+                            </p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/WGWm9cEV2qZi7Knu8"; class="text-xs font-bold uppercase tracking-widest text-brandPrimary hover:text-teal-700 mt-auto flex items-center space-x-2">
+                            <span>Get Started</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl overflow-hidden hover-lift border border-slate-100 flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=600&q=80" alt="Detached garage construction" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-serif mb-3 text-neutral-900">4. Detached Garage Construction</h3>
+                            <p class="text-sm leading-relaxed mb-6" style="color: #000000;">
+                                Build state-of-the-art stand-alone secure structures designed to incorporate workspace setups, high ceilings, and heavy machinery support.
+                            </p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/WGWm9cEV2qZi7Knu8"; class="text-xs font-bold uppercase tracking-widest text-brandPrimary hover:text-teal-700 mt-auto flex items-center space-x-2">
+                            <span>Get Started</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl overflow-hidden hover-lift border border-slate-100 flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=600&q=80" alt="Guest house or ADU construction" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-serif mb-3 text-neutral-900">5. Guest House & ADU</h3>
+                            <p class="text-sm leading-relaxed mb-6" style="color: #000000;">
+                                Accessorized Dwelling Units (ADU) fully optimized with utility routing, premium insulations, luxury kitchens, and dedicated exits.
+                            </p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/WGWm9cEV2qZi7Knu8"; class="text-xs font-bold uppercase tracking-widest text-brandPrimary hover:text-teal-700 mt-auto flex items-center space-x-2">
+                            <span>Get Started</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl overflow-hidden hover-lift border border-slate-100 flex flex-col h-full">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="New room addition" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold font-serif mb-3 text-neutral-900">6. New Room Addition</h3>
+                            <p class="text-sm leading-relaxed mb-6" style="color: #000000;">
+                                Seamless expansion of your existing floor plans with expert structural joinery that looks like it was part of the original blueprint.
+                            </p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/WGWm9cEV2qZi7Knu8"; class="text-xs font-bold uppercase tracking-widest text-brandPrimary hover:text-teal-700 mt-auto flex items-center space-x-2">
+                            <span>Get Started</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-gradient-to-b from-neutral-50 to-slate-100 overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="text-sm font-bold uppercase text-brandPrimary tracking-widest">Testimonials</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mt-2 mb-12" style="color: #4798ab;">Client Appraisals</h2>
+
+            <div class="relative bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-100">
+                <i class="fa-solid fa-quote-left text-5xl text-brandPrimary/20 absolute top-8 left-8"></i>
+                
+                <div class="relative min-h-[180px] flex flex-col justify-center">
+                    <div class="review-slide transition-opacity duration-500 ease-in-out">
+                        <p class="text-lg md:text-xl text-neutral-700 italic leading-relaxed">
+                            "LWB Construction delivered beyond our wildest expectations. They completed our ADU project 10 days ahead of schedule, with impeccable woodwork and perfect modern fixtures."
+                        </p>
+                        <h4 class="text-brandPrimary font-bold mt-6 tracking-wide text-sm uppercase">— Marcus G., Los Angeles</h4>
+                        <div class="flex justify-center space-x-1 mt-2 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="review-slide hidden transition-opacity duration-500 ease-in-out">
+                        <p class="text-lg md:text-xl text-neutral-700 italic leading-relaxed">
+                            "Their design-build services are unmatched. Our custom deck installation with climate-proofing composites is the highlight of our home. Absolutely brilliant!"
+                        </p>
+                        <h4 class="text-brandPrimary font-bold mt-6 tracking-wide text-sm uppercase">— Sarah L., San Jose</h4>
+                        <div class="flex justify-center space-x-1 mt-2 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="review-slide hidden transition-opacity duration-500 ease-in-out">
+                        <p class="text-lg md:text-xl text-neutral-700 italic leading-relaxed">
+                            "Excellent communication from blueprint stage to final sign-off. The room addition was masterfully matched to our existing exterior styling. High professionalism."
+                        </p>
+                        <h4 class="text-brandPrimary font-bold mt-6 tracking-wide text-sm uppercase">— Dave K., San Diego</h4>
+                        <div class="flex justify-center space-x-1 mt-2 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="review-slide hidden transition-opacity duration-500 ease-in-out">
+                        <p class="text-lg md:text-xl text-neutral-700 italic leading-relaxed">
+                            "Clean site, punctual team, and top-tier materials. The new balcony addition transformed the utility of our top floor master suite. Five stars without question!"
+                        </p>
+                        <h4 class="text-brandPrimary font-bold mt-6 tracking-wide text-sm uppercase">— Amanda J., San Francisco</h4>
+                        <div class="flex justify-center space-x-1 mt-2 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="review-slide hidden transition-opacity duration-500 ease-in-out">
+                        <p class="text-lg md:text-xl text-neutral-700 italic leading-relaxed">
+                            "Very transparent pricing structure. LWB handled all of our complicated detached garage permitting and completed a highly custom build with deep workshop capabilities."
+                        </p>
+                        <h4 class="text-brandPrimary font-bold mt-6 tracking-wide text-sm uppercase">— Robert S., Stockton</h4>
+                        <div class="flex justify-center space-x-1 mt-2 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="review-slide hidden transition-opacity duration-500 ease-in-out">
+                        <p class="text-lg md:text-xl text-neutral-700 italic leading-relaxed">
+                            "LWB is the gold standard of contractors. They listened closely to our aesthetic requirements, offered superb designs, and executed with ultimate architectural precision."
+                        </p>
+                        <h4 class="text-brandPrimary font-bold mt-6 tracking-wide text-sm uppercase">— Eleanor R., Sacramento</h4>
+                        <div class="flex justify-center space-x-1 mt-2 text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center mt-10">
+                    <button id="prev-btn" class="w-11 h-11 bg-slate-100 rounded-full hover:bg-brandPrimary hover:text-white text-neutral-800 flex items-center justify-center transition duration-300">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <div class="flex space-x-2" id="slide-indicators"></div>
+                    <button id="next-btn" class="w-11 h-11 bg-slate-100 rounded-full hover:bg-brandPrimary hover:text-white text-neutral-800 flex items-center justify-center transition duration-300">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-5 space-y-8">
+            <span class="text-sm font-bold uppercase text-brandPrimary tracking-widest">Connect with Us</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold" style="color: #4798ab;">Let’s Blueprint Your Dream Structure</h2>
+            <p class="text-gray-600 leading-relaxed">
+                Connect with our planning division today. We offer custom, structural estimations and complete on-site design surveys.
+            </p>
+
+            <div class="space-y-6 pt-4">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-brandPrimary text-lg">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-neutral-900">Physical Base Address</h4>
+                        <p class="text-sm text-gray-500">10569 Hildreth Ln, Stockton, CA 95212</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-brandPrimary text-lg">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-neutral-900">Direct Estimates</h4>
+                        <p class="text-sm text-gray-500">(209) 649-6099</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-brandPrimary text-lg">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-neutral-900">Email Inquiries</h4>
+                        <p class="text-sm text-gray-500">info@lwbconstruction.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-100">
+            <form action="#" method="POST" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">First & Last Name</label>
+                        <input type="text" placeholder="John Doe" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brandPrimary focus:bg-white transition" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Phone Number</label>
+                        <input type="tel" placeholder="(123) 456-7890" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brandPrimary focus:bg-white transition" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Email Address</label>
+                    <input type="email" placeholder="john@example.com" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brandPrimary focus:bg-white transition" required>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Service of Interest</label>
+                    <select class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brandPrimary focus:bg-white transition">
+                        <option>Select a Construction Service</option>
+                        <option>Balcony Addition</option>
+                        <option>Construction Design Services</option>
+                        <option>Deck Construction</option>
+                        <option>Detached Garage Construction</option>
+                        <option>Guest House / ADU Construction</option>
+                        <option>New Room Addition</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Project Description</label>
+                    <textarea rows="4" placeholder="Briefly write what your dream project looks like..." class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brandPrimary focus:bg-white transition" required></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-[#4798ab] hover:bg-teal-600 text-white font-bold py-4 rounded-xl uppercase tracking-widest text-xs shadow-lg transition duration-300">
+                    Submit Proposal Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-neutral-900 text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
+            <div class="lg:col-span-4 space-y-6">
+                <img src="LWB Construction.jpg" alt="LWB Construction Logo" class="h-16 w-auto rounded border border-white/20">
+                <p class="text-sm text-neutral-400 leading-relaxed">
+                    Premium structural builds, master additions, and custom-tailored contracting. We transform concepts into secure luxury estates.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.google.com/maps?cid=YOUR_GMB_CID_HERE" target="_blank" class="w-9 h-9 bg-white/5 hover:bg-brandPrimary rounded-full flex items-center justify-center text-sm transition" title="GMB Link">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 bg-white/5 hover:bg-brandPrimary rounded-full flex items-center justify-center text-sm transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-9 h-9 bg-white/5 hover:bg-brandPrimary rounded-full flex items-center justify-center text-sm transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 space-y-4">
+                <h4 class="font-bold text-sm tracking-wider uppercase text-white border-b border-white/10 pb-2">Explore</h4>
+                <ul class="space-y-2 text-sm text-neutral-400">
+                    <li><a href="#" class="hover:text-brandPrimary transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-brandPrimary transition">About</a></li>
+                    <li><a href="#services" class="hover:text-brandPrimary transition">Services</a></li>
+                    <li><a href="#reviews" class="hover:text-brandPrimary transition">Reviews</a></li>
+                    <li><a href="#contact" class="hover:text-brandPrimary transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="lg:col-span-6 space-y-4">
+                <h4 class="font-bold text-sm tracking-wider uppercase text-white border-b border-white/10 pb-2">Our Physical Location</h4>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-white/10 w-full h-56">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.542261209!2d-121.2163939!3d38.0336049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090124803d1590b%3A0xe5a3ebcd48677ee5!2s10569%20Hildreth%20Ln%2C%20Stockton%2C%20CA%2095212!5e0!3m2!1sen!2sus!4v1700000000000" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 text-center text-xs text-neutral-500">
+            <p>&copy; 2026 LWB Construction. All rights reserved. Registered General Contractor.</p>
+            <p class="mt-1">Proudly built under general contracting standards of California.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Script
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on anchor click
+        mobileMenu.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Reviews Slider logic
+        const slides = document.querySelectorAll('.review-slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const indicatorContainer = document.getElementById('slide-indicators');
+        let activeIndex = 0;
+
+        // Generate slide indicators (dots)
+        slides.forEach((_, idx) => {
+            const dot = document.createElement('button');
+            dot.classList.add('w-2.5', 'h-2.5', 'rounded-full', 'bg-neutral-300', 'transition-all');
+            if(idx === 0) dot.classList.add('bg-brandPrimary', 'w-6');
+            dot.addEventListener('click', () => {
+                goToSlide(idx);
+            });
+            indicatorContainer.appendChild(dot);
+        });
+
+        const dots = indicatorContainer.querySelectorAll('button');
+
+        function updateSlider() {
+            slides.forEach((slide, idx) => {
+                if(idx === activeIndex) {
+                    slide.classList.remove('hidden');
+                    slide.style.opacity = 1;
+                    dots[idx].classList.add('bg-brandPrimary', 'w-6');
+                    dots[idx].classList.remove('bg-neutral-300');
+                } else {
+                    slide.classList.add('hidden');
+                    slide.style.opacity = 0;
+                    dots[idx].classList.remove('bg-brandPrimary', 'w-6');
+                    dots[idx].classList.add('bg-neutral-300');
+                }
+            });
+        }
+
+        function nextSlide() {
+            activeIndex = (activeIndex + 1) % slides.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            activeIndex = (activeIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        function goToSlide(idx) {
+            activeIndex = idx;
+            updateSlider();
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto transition every 6 seconds
+        setInterval(nextSlide, 6000);
+    </script>
+</body>
+</html>
